@@ -1,0 +1,2288 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bulma.min.css">
+    <script src="modal.js"></script>
+    <style>
+        /* The Modal (background) */
+        
+        .modal {
+            display: hidden;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 5px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modalContent {
+            background-color: #d8dee9;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #888;
+            width: 65%;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1 class="title has-text-centered">A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912</h1>
+    </div>
+    <!--<div class="buttons has-addons are-medium is-centered">
+        <button class="button is-info is-hover">A</button>
+        <button class="button is-info is-hover">B</button>
+        <button class="button is-info is-hover">C</button>
+        <button class="button is-info is-hover">Con</button>
+        <button class="button is-info is-hover">D</button>
+        <button class="button is-info is-hover">E</button>
+        <button class="button is-info is-hover">F</button>
+        <button class="button is-info is-hover">G</button>
+        <button class="button is-info is-hover">H</button>
+        <button class="button is-info is-hover">I</button>
+        <button class="button is-info is-hover">K</button>
+        <button class="button is-info is-hover">L</button>
+        <button class="button is-info is-hover">M</button>
+        <button class="button is-info is-hover">N</button>
+        <button class="button is-info is-hover">O</button>
+        <button class="button is-info is-hover">P</button>
+        <button class="button is-info is-hover">Q</button>
+        <button class="button is-info is-hover">R</button>
+        <button class="button is-info is-hover">S</button>
+        <button class="button is-info is-hover">T</button>
+        <button class="button is-info is-hover">V</button>
+        <button class="button is-info is-hover">X,Y,Z</button>
+    </div>-->
+    <center>
+        <table class="table">
+            <thead>
+                <td align="center">
+                    <h1>A</h1>
+                </td>
+                <td align="center">
+                    <h1>B</h1>
+                </td>
+                <td align="center">
+                    <h1>C</h1>
+                </td>
+                <td align="center">
+                    <h1>Con</h1>
+                </td>
+                <td align="center">
+                    <h1>D</h1>
+                </td>
+                <td align="center">
+                    <h1>E</h1>
+                </td>
+                <td align="center">
+                    <h1>F</h1>
+                </td>
+                <td align="center">
+                    <h1>G</h1>
+                </td>
+                <td align="center">
+                    <h1>H</h1>
+                </td>
+                <td align="center">
+                    <h1>I</h1>
+                </td>
+                <td align="center">
+                    <h1>K</h1>
+                </td>
+                <td align="center">
+                    <h1>L</h1>
+                </td>
+                <td align="center">
+                    <h1>M</h1>
+                </td>
+                <td align="center">
+                    <h1>N</h1>
+                </td>
+                <td align="center">
+                    <h1>O</h1>
+                </td>
+                <td align="center">
+                    <h1>P</h1>
+                </td>
+                <td align="center">
+                    <h1>Q</h1>
+                </td>
+                <td align="center">
+                    <h1>R</h1>
+                </td>
+                <td align="center">
+                    <h1>S</h1>
+                </td>
+                <td align="center">
+                    <h1>T</h1>
+                </td>
+                <td align="center">
+                    <h1>V</h1>
+                </td>
+                <td align="center">
+                    <h1>X, Y, Z</h1>
+            </thead>
+            <tr>
+                <td>
+                    <h3>
+                        <button id="modalA" class="button is-info is-hover is-light" onclick="openModal('modalA')">A</button>
+                        <div id="modalA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI002.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3>
+                        <button id="modalAA<" class="button is-info is-hover is-light" onclick="openModal('modalAA')">AA<sup>ti</sup></button>
+                        <div id="modalAA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI004.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3>
+                        <button id="modalA3" class="button is-info is-hover is-light" onclick="openModal('modalA3')">AC</button>
+                        <div id="modalA3" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI006.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3>
+                        <button id="modalACTU" class="button is-info is-hover is-light" onclick="openModal('modalACTU')">ACTU</button>
+                        <div id="modalACTU" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI008.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                        <h3><button id="modalADUSO" class="button is-info is-hover is-light" onclick="openModal('modalADUSO')">ADUSO</button>
+                            <div id="modalADUSO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI010.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAGTOS" class="button is-info is-hover is-light" onclick="openModal('modalAGTOS')">AGTOS</button>
+                            <div id="modalAGTOS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI012.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalALL" class="button is-info is-hover is-light" onclick="openModal('modalALL')">ALL</button>
+                            <div id="modalALL" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI014.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAMT" class="button is-info is-hover is-light" onclick="openModal('modalAMT')">AMT</button>
+                            <div id="modalAMT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI016.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAO<" class="button is-info is-hover is-light" onclick="openModal('modalAO')">AO<sup>o</sup></button>
+                            <div id="modalAO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI018.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAPPB" class="button is-info is-hover is-light" onclick="openModal('modalAPPB')">APPB</button>
+                            <div id="modalAPPB" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI020.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAR" class="button is-info is-hover is-light" onclick="openModal('modalAR')">AR</button>
+                            <div id="modalAR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI024.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalARG" class="button is-info is-hover is-light" onclick="openModal('modalARG')">ARG<sup>ta</sup></button>
+                            <div id="modalARG" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI022.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAT" class="button is-info is-hover is-light" onclick="openModal('modalAT')">AT</button>
+                            <div id="modalAT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI026.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalAUDR" class="button is-info is-hover is-light" onclick="openModal('modalAUDR')">AUDR</button>
+                            <div id="modalAUDR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI028.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                </td>
+                <td>
+                    <h3><button id="modalB" class="button is-info is-hover is-light" onclick="openModal('modalB')">B</button>
+                        <div id="modalB" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI030.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalBAPT" class="button is-info is-hover is-light" onclick="openModal('modalBAPT')">BAPT</button>
+                        <div id="modalBAPT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI032.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalBL" class="button is-info is-hover is-light" onclick="openModal('modalBL')">BL</button>
+                        <div id="modalBL" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI034.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalBOI" class="button is-info is-hover is-light" onclick="openModal('modalBOI')">BOI</button>
+                        <div id="modalBOI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI036.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalBTO" class="button is-info is-hover is-light" onclick="openModal('modalBTO')">BTO-<font color="rgb(120,0,0)">C</font></button>
+                        <div id="modalBTO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI038.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="57 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalC" class="button is-info is-hover is-light" onclick="openModal('modalC')">C</button>
+                        <div id="modalC" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI040.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCA<" class="button is-info is-hover is-light" onclick="openModal('modalCA')">CA<sup>li</sup></button>
+                        <div id="modalCA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI042.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCAN<" class="button is-info is-hover is-light" onclick="openModal('modalCAN')">CAN<sup>ro</sup></button>
+                        <div id="modalCAN" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI044.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCAR" class="button is-info is-hover is-light" onclick="openModal('modalCAR')">CAR</button>
+                        <div id="modalCAR" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI046.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCAUOE" class="button is-info is-hover is-light" onclick="openModal('modalCAUOE')">CAUOE</button>
+                        <div id="modalCAUOE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI048.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCDDI" class="button is-info is-hover is-light" onclick="openModal('modalCDDI')">CDDI</button>
+                        <div id="modalCDDI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI050.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCHOR" class="button is-info is-hover is-light" onclick="openModal('modalCHOR')">CHOR</button>
+                        <div id="modalCHOR" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI052.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCLAUE" class="button is-info is-hover is-light" onclick="openModal('modalCLAUE')">CLAUE</button>
+                        <div id="modalCLAUE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI054.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCO" class="button is-info is-hover is-light" onclick="openModal('modalCO')">CO<sup>b</sup></button>
+                        <div id="modalCO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI056.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCOITER" class="button is-info is-hover is-light" onclick="openModal('modalCOITER')">COITER</button>
+                        <div id="modalCOITER" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI058.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCONCTOS" class="button is-info is-hover is-light" onclick="openModal('modalCONCTOS')">CONCTOS</button>
+                        <div id="modalCONCTOS" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI060.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCOR<" class="button is-info is-hover is-light" onclick="openModal('modalCOR')">COR<sup>m</sup></button>
+                        <div id="modalCOR" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI062.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCONT" class="button is-info is-hover is-light" onclick="openModal('modalCONT')">CONT</button>
+                        <div id="modalCONT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI064.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalCSSR" class="button is-info is-hover is-light" onclick="openModal('modalCSSR')">CSSR</button>
+                        <div id="modalCSSR" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI066.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="53 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modal9" class="button is-info is-hover is-light" onclick="openModal('modal9')">9</button>
+                        <div id="modal9" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI068.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9sm" class="button is-info is-hover is-light" onclick="openModal('modal9sm')"><sub>9</sub>sm</button>
+                        <div id="modal9sm" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI070.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9csio" class="button is-info is-hover is-light" onclick="openModal('modal9csio')"><sub>9</sub>CSIO</button>
+                        <div id="modal9csio" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI072.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9fes" class="button is-info is-hover is-light" onclick="openModal('modal9fes')"><sub>9</sub>FESS</button>
+                        <div id="modal9fes" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI074.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9ht" class="button is-info is-hover is-light" onclick="openModal('modal9ht')"><sub>9</sub>HT</button>
+                        <div id="modal9ht" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI076.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9ne" class="button is-info is-hover is-light" onclick="openModal('modal9ne')"><sub>9</sub>NE</button>
+                        <div id="modal9ne" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI078.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9ple" class="button is-info is-hover is-light" onclick="openModal('modal9ple')"><sub>9</sub>PLE<sup>a</sup></button>
+                        <div id="modal9ple" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI080.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9sgit" class="button is-info is-hover is-light" onclick="openModal('modal9sgit')"><sub>9</sub>SGIT</button>
+                        <div id="modal9sgit" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI082.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modal9tico" class="button is-info is-hover is-light" onclick="openModal('modal9tico')"><sub>9</sub>T<sup>i</sup>CO</button>
+                        <div id="modal9tico" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI084.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="61 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalD" class="button is-info is-hover is-light" onclick="openModal('modalD')">D</button>
+                        <div id="modalD" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI086.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDm" class="button is-info is-hover is-light" onclick="openModal('modalDm')">D<sup>m</sup></button>
+                        <div id="modalDm" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI088.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDC" class="button is-info is-hover is-light" onclick="openModal('modalDC')">DC</button>
+                        <div id="modalDC" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI090.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDDI" class="button is-info is-hover is-light" onclick="openModal('modalDDI')">DDI</button>
+                        <div id="modalDDI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI092.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDEFQL" class="button is-info is-hover is-light" onclick="openModal('modalDEFQL')">DEFQL</button>
+                        <div id="modalDEFQL" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI094.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDET" class="button is-info is-hover is-light" onclick="openModal('modalDET')">DET</button>
+                        <div id="modalDET" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI096.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDICS" class="button is-info is-hover is-light" onclick="openModal('modalDICS')">DICS</button>
+                        <div id="modalDICS" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI098.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDILNT" class="button is-info is-hover is-light" onclick="openModal('modalDILNT')">DILNT</button>
+                        <div id="modalDILNT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI100.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDISSA" class="button is-info is-hover is-light" onclick="openModal('modalDISSA')">DISSA</button>
+                        <div id="modalDISSA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI102.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDMRO" class="button is-info is-hover is-light" onclick="openModal('modalDMRO')">DMRO</button>
+                        <div id="modalDMRO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI104.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDNTI" class="button is-info is-hover is-light" onclick="openModal('modalDNTI')">DNTI</button>
+                        <div id="modalDNTI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI106.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDOT" class="button is-info is-hover is-light" onclick="openModal('modalDOT')">DOT</button>
+                        <div id="modalDOT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI108.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDSC" class="button is-info is-hover is-light" onclick="openModal('modalDSC')">DSC<sup>i</sup><sup>P</sup><sup>o</sup></button>
+                        <div id="modalDSC" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI110.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalDUAt" class="button is-info is-hover is-light" onclick="openModal('modalDUAt')">DUAt-<font color="rgb(120,0,0)">E</font></button>
+                        <div id="modalDUAt" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI112.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="51 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalE" class="button is-info is-hover is-light" onclick="openModal('modalE')">E<sup>9</sup>a</button>
+                        <div id="modalE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI114.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalECCLIIS" class="button is-info is-hover is-light" onclick="openModal('modalECCLIIS')">ECCLIIS</button>
+                        <div id="modalECCLIIS" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI116.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalEG" class="button is-info is-hover is-light" onclick="openModal('modalEG')">EG</button>
+                        <div id="modalEG" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI118.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalELIE" class="button is-info is-hover is-light" onclick="openModal('modalELIE')">ELIE</button>
+                        <div id="modalELIE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI120.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalEPH" class="button is-info is-hover is-light" onclick="openModal('modalEPH')">EPH</button>
+                        <div id="modalEPH" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI122.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalER" class="button is-info is-hover is-light" onclick="openModal('modalER')">ER</button>
+                        <div id="modalER" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI124.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalEVI" class="button is-info is-hover is-light" onclick="openModal('modalEVI')">EVI</button>
+                        <div id="modalEVI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI126.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalExtis" class="button is-info is-hover is-light" onclick="openModal('modalExtis')">E<sup>xtis</sup></button>
+                        <div id="modalExtis" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI128.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalEXMO" class="button is-info is-hover is-light" onclick="openModal('modalEXMO')">EXMO</button>
+                        <div id="modalEXMO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI130.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalEXT" class="button is-info is-hover is-light" onclick="openModal('modalEXT')">EXT-<font color="rgb(120,0,0) ">F</button>
+                        <div id="modalEXT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI132.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="49 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalF" class="button is-info is-hover is-light" onclick="openModal('modalF')">F<sup>9</sup></button>
+                        <div id="modalF" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI134.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFCTO" class="button is-info is-hover is-light" onclick="openModal('modalFCTO')">FCTO</button>
+                        <div id="modalFCTO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI136.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFI" class="button is-info is-hover is-light" onclick="openModal('modalFI')">FI<sup>c</sup></button>
+                        <div id="modalFI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI138.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFLE" class="button is-info is-hover is-light" onclick="openModal('modalFLE')">FLE</button>
+                        <div id="modalFLE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI140.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFOA" class="button is-info is-hover is-light" onclick="openModal('modalFOA')">FOA<sup>n</sup></button>
+                        <div id="modalFOA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI142.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFRDIC" class="button is-info is-hover is-light" onclick="openModal('modalFRDIC')">FRDIC</button>
+                        <div id="modalFRDIC" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI144.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalFT" class="button is-info is-hover is-light" onclick="openModal('modalFT')">FT<sup>m</sup>-<font color="rgb(120,0,0) ">G</button>
+                        <div id="modalFT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI146.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="42 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalG" class="button is-info is-hover is-light" onclick="openModal('modalG')">G<sup>atir</sup></button>
+                        <div id="modalG" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI148.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalGEO<" class="button is-info is-hover is-light" onclick="openModal('modalGEO')">GEO<sup>a</sup></button>
+                        <div id="modalGEO" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI150.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalGN" class="button is-info is-hover is-light" onclick="openModal('modalGN')">GN<sup>le</sup></button>
+                        <div id="modalGN" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI152.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalGRAT" class="button is-info is-hover is-light" onclick="openModal('modalGRAT')">GRAT</button>
+                        <div id="modalGRAT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI154.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="51 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalH" class="button is-info is-hover is-light" onclick="openModal('modalH')">H</button>
+                        <div id="modalH" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI156.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalHAIT" class="button is-info is-hover is-light" onclick="openModal('modalHAIT')">HAIT</button>
+                        <div id="modalHAIT" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI158.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalHERIUS" class="button is-info is-hover is-light" onclick="openModal('modalHERIUS')">HERIUS</button>
+                        <div id="modalHERIUS" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI160.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalHLUD" class="button is-info is-hover is-light" onclick="openModal('modalHLUD')">HLUD</button>
+                        <div id="modalHLUD" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI162.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalHOMIJ" class="button is-info is-hover is-light" onclick="openModal('modalHOMIJ')">HOMIJ</button>
+                        <div id="modalHOMIJ" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI164.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalHUAI" class="button is-info is-hover is-light" onclick="openModal('modalHUAI')">HUAI<sup>t</sup></button>
+                        <div id="modalHUAI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI166.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                </td>
+                <td width="54 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalI" class="button is-info is-hover is-light" onclick="openModal('modalI')">I</button>
+                        <div id="modalI" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI168.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIti" class="button is-info is-hover is-light" onclick="openModal('modalIti')">I<sup>ti</sup></button>
+                        <div id="modalIti" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI170.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalICOTIt" class="button is-info is-hover is-light" onclick="openModal('modalICOTIt')">ICOTIt</button>
+                        <div id="modalICOTIt" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI172.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIEM" class="button is-info is-hover is-light" onclick="openModal('modalIEM')">IEM</button>
+                        <div id="modalIEM" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI174.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIHET" class="button is-info is-hover is-light" onclick="openModal('modalIHET')">IHET</button>
+                        <div id="modalIHET" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI176.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalILLUes" class="button is-info is-hover is-light" onclick="openModal('modalILLUes')">ILLU<sup>es</sup></button>
+                        <div id="modalILLUes" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI178.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIND" class="button is-info is-hover is-light" onclick="openModal('modalIND')">IND<sup>r</sup></button>
+                        <div id="modalIND" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI180.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalINQ" class="button is-info is-hover is-light" onclick="openModal('modalINQ')">INQ<sup>o</sup>NU</button>
+                        <div id="modalINQ" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI182.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalINTELLS" class="button is-info is-hover is-light" onclick="openModal('modalINTELLS')">INTELLS</button>
+                        <div id="modalINTELLS" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI184.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIP" class="button is-info is-hover is-light" onclick="openModal('modalIP')">IP</button>
+                        <div id="modalIP" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI186.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIPSSOM" class="button is-info is-hover is-light" onclick="openModal('modalIPSSOM')">IPSSOM</button>
+                        <div id="modalIPSSOM" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI188.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalISTA" class="button is-info is-hover is-light" onclick="openModal('modalISTA')">ISTA</button>
+                        <div id="modalISTA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI190.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalITE" class="button is-info is-hover is-light" onclick="openModal('modalITE')">ITE<sup>r</sup></button>
+                        <div id="modalITE" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI192.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <h3><button id="modalIVD" class="button is-info is-hover is-light" onclick="openModal('modalIVD')">IVD-<font color="rgb(120,0,0) ">K</button>
+                        <div id="modalIVD" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI194.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <p>&nbsp;</td>
+                <td width="26 " valign="top " style="margin-top: 5px ">
+                    <h3><button id="modalKA" class="button is-info is-hover is-light" onclick="openModal('modalKA')">KA</button>
+                        <div id="modalKA" class="modal">
+                            <div class="modalContent">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <img src="Departments/Medieval/Cappelli/CPLLI196.jpg"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </h3>
+                    <td width="58 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalL" class="button is-info is-hover is-light" onclick="openModal('modalL')">L</button>
+                            <div id="modalL" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI198.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalLAT" class="button is-info is-hover is-light" onclick="openModal('modalLAT')">LAT</button>
+                            <div id="modalLAT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI200.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalLEGME" class="button is-info is-hover is-light" onclick="openModal('modalLEGME')">LEGME</button>
+                            <div id="modalLEGME" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI202.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalLL" class="button is-info is-hover is-light" onclick="openModal('modalLL')">LL</button>
+                            <div id="modalLL" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI204.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalLP" class="button is-info is-hover is-light" onclick="openModal('modalLP')">LP</button>
+                            <div id="modalLP" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI206.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="79 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalM" class="button is-info is-hover is-light" onclick="openModal('modalM')">M</button>
+                            <div id="modalM" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI208.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMi" class="button is-info is-hover is-light" onclick="openModal('modalMi')">M<sup>i</sup></button>
+                            <div id="modalMi" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI210.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMAE" class="button is-info is-hover is-light" onclick="openModal('modalMAE')">MAE</button>
+                            <div id="modalMAE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI212.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMATH" class="button is-info is-hover is-light" onclick="openModal('modalMATH')">MATH<sup>ca</sup></button>
+                            <div id="modalMATH" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI214.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalME" class="button is-info is-hover is-light" onclick="openModal('modalME')">ME<sup>oa</sup></button>
+                            <div id="modalME" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI216.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMGRAT" class="button is-info is-hover is-light" onclick="openModal('modalMGRAT')">MGRAT</button>
+                            <div id="modalMGRAT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI218.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMIST" class="button is-info is-hover is-light" onclick="openModal('modalMIST')">MIST</button>
+                            <div id="modalMIST" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI220.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMM" class="button is-info is-hover is-light" onclick="openModal('modalMM')">MM</button>
+                            <div id="modalMM" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI222.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMOIO" class="button is-info is-hover is-light" onclick="openModal('modalMOIO')">MOIO</button>
+                            <div id="modalMOIO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI224.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMRES" class="button is-info is-hover is-light" onclick="openModal('modalMRES')">MRES</button>
+                            <div id="modalMRES" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI226.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalMaTOR" class="button is-info is-hover is-light" onclick="openModal('modalMaTOR')">M<sup>a</sup>TOR-
+                        <font color="rgb(120,0,0)">N</button>
+                            <div id="modalMaTOR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI228.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="54 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalN" class="button is-info is-hover is-light" onclick="openModal('modalN')">N</button>
+                            <div id="modalN" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI230.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNRALE" class="button is-info is-hover is-light" onclick="openModal('modalNRALE')">N<sup>r</sup>ALE</button>
+                            <div id="modalNRALE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI232.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNE" class="button is-info is-hover is-light" onclick="openModal('modalNE')">NE</button>
+                            <div id="modalNE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI234.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNLLI" class="button is-info is-hover is-light" onclick="openModal('modalNLLI')">NLLI</button>
+                            <div id="modalNLLI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI236.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNOA" class="button is-info is-hover is-light" onclick="openModal('modalNOA')">NOA</button>
+                            <div id="modalNOA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI238.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNOS" class="button is-info is-hover is-light" onclick="openModal('modalNOS')">NOS</button>
+                            <div id="modalNOS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI240.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalNS" class="button is-info is-hover is-light" onclick="openModal('modalNS')">NS</button>
+                            <div id="modalNS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI242.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="55 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalO" class="button is-info is-hover is-light" onclick="openModal('modalO')">O</button>
+                            <div id="modalO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI244.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalOBEE" class="button is-info is-hover is-light" onclick="openModal('modalOBEE')">OBEE</button>
+                            <div id="modalOBEE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI246.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalODO" class="button is-info is-hover is-light" onclick="openModal('modalODO')">ODO</button>
+                            <div id="modalODO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI248.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalOMA" class="button is-info is-hover is-light" onclick="openModal('modalOMA')">OMA</button>
+                            <div id="modalOMA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI250.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalOP" class="button is-info is-hover is-light" onclick="openModal('modalOP')">OP<sup>t</button>
+                            <div id="modalOP" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI252.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalORAT" class="button is-info is-hover is-light" onclick="openModal('modalORAT')">ORAT</button>
+                            <div id="modalORAT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI254.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="57 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalP" class="button is-info is-hover is-light" onclick="openModal('modalP')">P</button>
+                            <div id="modalP" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI256.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPa" class="button is-info is-hover is-light" onclick="openModal('modalPa')">P<sup>a</button>
+                            <div id="modalPa" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI258.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPra" class="button is-info is-hover is-light" onclick="openModal('modalPra')">P<sup>ra<sup></button>
+                            <div id="modalPra" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI260.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPAN" class="button is-info is-hover is-light" onclick="openModal('modalPAN')">PAN</button>
+                            <div id="modalPAN" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI262.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPBRJS" class="button is-info is-hover is-light" onclick="openModal('modalPBRJS')">PBRJS</button>
+                            <div id="modalPBRJS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI264.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPaCO" class="button is-info is-hover is-light" onclick="openModal('modalPaCO')">P<sup>a</sup>CO</button>
+                            <div id="modalPaCO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI266.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPE" class="button is-info is-hover is-light" onclick="openModal('modalPE')">PE</button>
+                            <div id="modalPE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI268.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPF" class="button is-info is-hover is-light" onclick="openModal('modalPF')">PF</button>
+                            <div id="modalPF" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI270.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPHICO" class="button is-info is-hover is-light" onclick="openModal('modalPHICO')">PHICO</button>
+                            <div id="modalPHICO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI272.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPLAC" class="button is-info is-hover is-light" onclick="openModal('modalPLAC')">PLAC</button>
+                            <div id="modalPLAC" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI274.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPM" class="button is-info is-hover is-light" onclick="openModal('modalPM')">PM</button>
+                            <div id="modalPM" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI276.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPNIE" class="button is-info is-hover is-light" onclick="openModal('modalPNIE')">PNIE</button>
+                            <div id="modalPNIE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI278.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPiO" class="button is-info is-hover is-light" onclick="openModal('modalPiO')">P<sup>i</sup>O</button>
+                            <div id="modalPiO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI280.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPOR" class="button is-info is-hover is-light" onclick="openModal('modalPOR')">POR<sup>o<sup></button>
+                            <div id="modalPOR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI282.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPP" class="button is-info is-hover is-light" onclick="openModal('modalPP')">PP<sup>e<sup></button>
+                            <div id="modalPP" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI284.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPPHE" class="button is-info is-hover is-light" onclick="openModal('modalPPHE')">PPHE</button>
+                            <div id="modalPPHE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI286.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPPTI" class="button is-info is-hover is-light" onclick="openModal('modalPPTI')">PPTI</button>
+                            <div id="modalPPTI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI288.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPaRI" class="button is-info is-hover is-light" onclick="openModal('modalPaRI')">P<sup>a</sup>RI</button>
+                            <div id="modalPaRI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI290.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPaS" class="button is-info is-hover is-light" onclick="openModal('modalPaS')">P<sup>a</sup>S</button>
+                            <div id="modalPaS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI292.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPT" class="button is-info is-hover is-light" onclick="openModal('modalPT')">PT</button>
+                            <div id="modalPT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI294.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPTI" class="button is-info is-hover is-light" onclick="openModal('modalPTI')">PTI<sup>re<sup></button>
+                            <div id="modalPTI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI296.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalPUEI" class="button is-info is-hover is-light" onclick="openModal('modalPUEI')">PUEI<sup>a<sup></button>
+                            <div id="modalPUEI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI298.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <p>&nbsp;</td>
+                    <td width="57 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalQ" class="button is-info is-hover is-light" onclick="openModal('modalQ')">Q</button>
+                            <div id="modalQ" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI300.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQ2" class="button is-info is-hover is-light" onclick="openModal('modalQ2')">Q</button>
+                            <div id="modalQ2" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI302.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQe" class="button is-info is-hover is-light" onclick="openModal('modalQe')">Q<sup>e<sup></button>
+                            <div id="modalQe" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI304.png"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQBDA" class="button is-info is-hover is-light" onclick="openModal('modalQBDA')">QBDA</button>
+                            <div id="modalQBDA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI306.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQDC" class="button is-info is-hover is-light" onclick="openModal('modalQDC')">QDC</button>
+                            <div id="modalQDC" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI308.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQaLR" class="button is-info is-hover is-light" onclick="openModal('modalQaLR')">Q<sup>a</sup>LR</button>
+                            <div id="modalQaLR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI310.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQaNTO" class="button is-info is-hover is-light" onclick="openModal('modalQaNTO')">Q<sup>a</sup>NTO</button>
+                            <div id="modalQaNTO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI312.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQRE" class="button is-info is-hover is-light" onclick="openModal('modalQRE')">QRE<sup>s</button>
+                            <div id="modalQRE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI314.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalQTO" class="button is-info is-hover is-light" onclick="openModal('modalQTO')">QTO</button>
+                            <div id="modalQTO" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI316.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td width="61 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalR" class="button is-info is-hover is-light" onclick="openModal('modalR')">R</button>
+                            <div id="modalR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI318.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRoe" class="button is-info is-hover is-light" onclick="openModal('modalRoe')">R<sup>oe<sup></button>
+                            <div id="modalRoe" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI320.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRCA" class="button is-info is-hover is-light" onclick="openModal('modalRCA')">RCA</button>
+                            <div id="modalRCA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI322.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRECIPTI" class="button is-info is-hover is-light" onclick="openModal('modalRECIPTI')">RECIPTI</button>
+                            <div id="modalRECIPTI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI324.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRENT" class="button is-info is-hover is-light" onclick="openModal('modalRENT')">RENT</button>
+                            <div id="modalRENT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI326.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRFI" class="button is-info is-hover is-light" onclick="openModal('modalRFI')">RFI<sup>di<sup></button>
+                            <div id="modalRFI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI328.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRLTIA" class="button is-info is-hover is-light" onclick="openModal('modalRLTIA')">RLTIA</button>
+                            <div id="modalRLTIA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI330.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalROALE" class="button is-info is-hover is-light" onclick="openModal('modalROALE')">ROALE</button>
+                            <div id="modalROALE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI332.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalRQ" class="button is-info is-hover is-light" onclick="openModal('modalRQ')">RQ<sup>ir<sup></button>
+                            <div id="modalRQ" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI334.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="76 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalS" class="button is-info is-hover is-light" onclick="openModal('modalS')">S</button>
+                            <div id="modalS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI336.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalScoes" class="button is-info is-hover is-light" onclick="openModal('modalScoes')">S<sup>coes</button>
+                            <div id="modalScoes" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI338.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSACLIT" class="button is-info is-hover is-light" onclick="openModal('modalSACLIT')">SACLIT</button>
+                            <div id="modalSACLIT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI340.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSB" class="button is-info is-hover is-light" onclick="openModal('modalSB')">SB<sup>e<sup></button>
+                            <div id="modalSB" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI342.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSCD" class="button is-info is-hover is-light" onclick="openModal('modalSCD')">SCD</button>
+                            <div id="modalSCD" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI344.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSCOS" class="button is-info is-hover is-light" onclick="openModal('modalSCOS')">SCOS</button>
+                            <div id="modalSCOS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI346.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSEC" class="button is-info is-hover is-light" onclick="openModal('modalSEC')">SEC</button>
+                            <div id="modalSEC" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI348.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSFI" class="button is-info is-hover is-light" onclick="openModal('modalSFI')">SFI<sup>at</button>
+                            <div id="modalSFI" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI350.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSIGNAT" class="button is-info is-hover is-light" onclick="openModal('modalSIGNAT')">SIGNAT</button>
+                            <div id="modalSIGNAT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI352.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalSLE" class="button is-info is-hover is-light" onclick="openModal('modalSLE')">SLE</button>
+                            <div id="modalSLE" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI354.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3><button id="modalSO" class="button is-info is-hover is-light" onclick="openModal('modalSO')">SO<sup>a</button>
+                                <div id="modalSO" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI356.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSPA" class="button is-info is-hover is-light" onclick="openModal('modalSPA')">SPA<sup>r<sup></button>
+                                <div id="modalSPA" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI358.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSPM" class="button is-info is-hover is-light" onclick="openModal('modalSPM')">SPM</button>
+                                <div id="modalSPM" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI360.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSRI" class="button is-info is-hover is-light" onclick="openModal('modalSRI')">SRI</button>
+                                <div id="modalSRI" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI362.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSSS" class="button is-info is-hover is-light" onclick="openModal('modalSSS')">SSS</button>
+                                <div id="modalSSS" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI364.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSTO" class="button is-info is-hover is-light" onclick="openModal('modalSTO')">STO</button>
+                                <div id="modalSTO" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI366.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+                            </h3>
+                            <h3><button id="modalSUO" class="button is-info is-hover is-light" onclick="openModal('modalSUO')">SUO-<font color="rgb(120,0,0)">T</button>
+                                <div id="modalSUO" class="modal">
+                                    <div class="modalContent">
+                                        <span class="close">&times;</span>
+                                        <div>
+                                            <img src="Departments/Medieval/Cappelli/CPLLI368.jpg"></img>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </h3>
+                    </td>
+                    <td width="53 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalT" class="button is-info is-hover is-light" onclick="openModal('modalT')">T</button>
+                            <div id="modalT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI370.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTrBA" class="button is-info is-hover is-light" onclick="openModal('modalTrBA')">T<sup>r</sup>BA</button>
+                            <div id="modalTrBA" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI372.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTEST" class="button is-info is-hover is-light" onclick="openModal('modalTEST')">TEST</button>
+                            <div id="modalTEST" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI374.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTIN" class="button is-info is-hover is-light" onclick="openModal('modalTIN')">TIN</button>
+                            <div id="modalTIN" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI376.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTANS" class="button is-info is-hover is-light" onclick="openModal('modalTANS')">T<sup>a</sup>NS<sup>t</sup></button>
+                            <div id="modalTANS" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI378.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTPR" class="button is-info is-hover is-light" onclick="openModal('modalTPR')">TPR</button>
+                            <div id="modalTPR" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI380.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalTT" class="button is-info is-hover is-light" onclick="openModal('modalTT')">TT<sup>li</sup>-
+                        <font color="rgb(120,0,0)">V</button>
+                            <div id="modalTT" class="modal">
+                                <div class="modalContent">
+                                    <span class="close">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI382.jpg"></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="95 " valign="top " align="left " height="521 ">
+                        <h3>
+                            <button id="modalV" class="button is-info is-hover is-light " onclick="openModal( 'modalV') ">V</button>
+                            <div id="modalV" class="modal">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI384.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalVAR" class="button is-info is-hover is-light " onclick="openModal( 'modalVAR') ">VAR</button>
+                            <div id="modalVAR" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI386.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalVEL" class="button is-info is-hover is-light " onclick="openModal( 'modalVEL') ">VEL</button>
+                            <div id="modalVEL" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI388.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalVI" class="button is-info is-hover is-light " onclick="openModal( 'modalVI') ">VI<sup>c<sup></button>
+                            <div id="modalVI" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI390.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalVINT" class="button is-info is-hover is-light " onclick="openModal( 'modalVINT') ">VINT<sup>o<sup></button>
+                            <div id="modalVINT" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI392.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalVMEC" class="button is-info is-hover is-light " onclick="openModal( 'modalVMEC') ">VMEC</button>
+                            <div id="modalVMEC" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI394.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3>
+                            <button id="modalVONA" class="button is-info is-hover is-light " onclick="openModal( 'modalVONA') ">VONA</button>
+                            <div id="modalVONA" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI396.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalUS" class="button is-info is-hover is-light " onclick="openModal( 'modalUS') ">US</button>
+                            <div id="modalUS" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI398.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalWILLS" class="button is-info is-hover is-light " onclick="openModal( 'modalWILLS') ">WILLS-<font color="rgb(120,0,0) ">X</button>
+                            <div id="modalWILLS" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI400.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                    <td width="65 " valign="top " align="left " height="521 ">
+                        <h3><button id="modalXANA" class="button is-info is-hover is-light " onclick="openModal( 'modalXANA') ">XANA-Y</button>
+                            <div id="modalXANA" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI402.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                        <h3><button id="modalYDIOt" class="button is-info is-hover is-light " onclick="openModal( 'modalYDIOt') ">YDIOt-Z</button>
+                            <div id="modalYDIOt" class="modal ">
+                                <div class="modalContent ">
+                                    <span class="close ">&times;</span>
+                                    <div>
+                                        <img src="Departments/Medieval/Cappelli/CPLLI404.jpg "></img>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+
+    <div class="field is-grouped is-grouped-multiline ">
+        <div class="control ">
+            <div class="tags has-addons ">
+                <span class="tag is-dark ">Licence</span>
+                <span class="tag is-info ">MIT</span>
+            </div>
+        </div>
+
+        <div class="control ">
+            <div class="tags has-addons ">
+                <span class="tag is-dark ">Code by</span>
+                <span class="tag is-success ">Valoucloud</span>
+            </div>
+        </div>
+
+        <div class="control ">
+            <div class="tags has-addons ">
+                <span class="tag is-dark ">Bulma</span>
+                <span class="tag is-primary ">v0.9.3</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modals = document.getElementsByClassName("modal ");
+        var modalOpenBtn = document.getElementsByClassName("button ");
+        var currentModal = null;
+
+        // Function to open modal by id
+        function openModal(id) {
+            for (i = 0; i < modals.length; i++) {
+                if (modals[i].getAttribute('id') == id) {
+                    currentModal = modals[i];
+                    currentModal.style.display = "block ";
+                    break;
+                }
+            }
+        }
+
+        // When the user clicks the button, open modal with the same id
+        modalOpenBtn.onclick = function() {
+            let currentID = modalOpenBtn.getAttribute('id');
+            openModal(currentID);
+        }
+
+        // When the user clicks anywhere outside of the modal or the X, close
+        window.onclick = function(event) {
+            if (event.target == currentModal || event.target.getAttribute('class') == 'close') {
+                currentModal.style.display = "none ";
+            }
+        }
+    </script>
+</body>
+
+</html>
