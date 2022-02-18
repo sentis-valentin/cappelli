@@ -30,7 +30,7 @@ class Window(QMainWindow):
 
     
     def home(self):
-        self.browser.setUrl(QUrl('https://web.archive.org/web/20160317233629/http://www.hist.msu.ru/Departments/Medieval/Cappelli/'))
+        self.browser.setUrl(QUrl('https://sentis-valentin.github.io/cappelli/'))
 
    
     def loadUrl(self):
