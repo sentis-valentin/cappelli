@@ -7,9 +7,9 @@ Une application simple est disponible, elle consiste en un script python Qt5 emp
 Les binaires sont disponibles pour Linux pour l'instant, Mac et Windows arrivent !
 
 Pour utiliser le script python :
-'''' 
+````
 sudo apt install python3 && python3 main.py
-''''
+````
 
 
 ![capture d'écran](capture.png)
