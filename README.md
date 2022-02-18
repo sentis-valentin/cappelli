@@ -4,7 +4,7 @@ _A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912_
 
 Une application simple est disponible, elle consiste en un script python Qt5 empaqueté avec _pyinstaller_.
 
-Les binaires sont disponibles pour Linux pour l'instant, Mac et Windows arrivent !
+Les binaires sont disponibles pour Linux et Windows pour l'instant, Mac arrive !
 
 Pour utiliser le script python, télécharger _main.py_, et en se mettant dans le dossier où se trouve le fichier :
 ````
