@@ -1,5 +1,6 @@
 # cappelli
-Site d'aide au développement des abréviations paléographiques
+Site d'aide au développement des abréviations paléographiques en reprenant lee dictionnaire Cappelli : 
+_A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912_
 
 Une application simple est disponible, elle consiste en un script python Qt5 empaqueté avec _pyinstaller_.
 
