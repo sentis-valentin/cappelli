@@ -17,7 +17,7 @@ Pour Windows, téléchargez [cappelli_windows.exe](https://github.com/sentis-val
 
 Pour compiler le script python et utiliser le code, télécharger _main.py_, et en se mettant dans le dossier où se trouve le fichier :
 ````
-sudo apt install python3 && python3 main.py
+sudo apt install python3 && pip install -r requirements.txt && python3 main.py
 ````
 
 
