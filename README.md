@@ -1,4 +1,4 @@
-# ![cappelli](cap.png "width=100") cappelli
+# ![cappelli](cap.png "width=10") cappelli
 Site d'aide au développement des abréviations paléographiques en reprenant lee dictionnaire Cappelli : 
 _A. CAPPELLI. DIZIONARIO DI ABBREVIATURE LATINE ED ITALIANE. Milano, 1912_
 
