@@ -15,8 +15,12 @@ chmod +x Cappelli-x86_64.AppImage && ./Cappelli-x86_64.AppImage
 ````
 Pour Windows, téléchargez [cappelli_windows.exe](https://github.com/sentis-valentin/cappelli/releases/download/v.1.0.0/cappelli_windows.exe), et l'ouvrir comme n'importe quelle application.
 
-Sous Linux, pour compiler le script python et utiliser le code, télécharger _main.py_, et en se mettant dans le dossier où se trouve le fichier :
+Sous Linux, pour compiler le script python et utiliser le code :
 ````
+git clone https://github.com/sentis-valentin/cappelli
+
+cd cappelli
+
 sudo apt install python3 && pip install -r requirements.txt && python3 main.py
 ````
 
